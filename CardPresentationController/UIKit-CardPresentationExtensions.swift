@@ -22,6 +22,7 @@ extension UIViewController {
 	}
 
 
+	@available(iOS 10.0, *)
 	/// Presents given View Controller using custom Card-like modal transition. Think like Apple‘s Music or Wallet apps.
 	///
 	///	Existing view will slide down and fade a bit and top corners would be rounded.

@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 final class CardTransitionManager: NSObject, UIViewControllerTransitioningDelegate {
 	private(set) var configuration: CardConfiguration
 

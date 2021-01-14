@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 public class CardPresentationController: UIPresentationController {
 	public static var useSystemPresentationOniOS13 = true
 
