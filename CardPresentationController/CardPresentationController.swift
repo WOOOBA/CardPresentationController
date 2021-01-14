@@ -236,6 +236,7 @@ public class CardPresentationController: UIPresentationController {
 	}
 }
 
+@available(iOS 10.0, *)
 extension CardPresentationController: UIGestureRecognizerDelegate {
 	public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
 								  shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool

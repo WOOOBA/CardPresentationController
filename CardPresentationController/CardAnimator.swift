@@ -77,6 +77,7 @@ final class CardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 	}
 }
 
+@available(iOS 10.0, *)
 extension CardAnimator: UIViewControllerInteractiveTransitioning {
 	func startInteractiveTransition(_ transitionContext: UIViewControllerContextTransitioning) {
 		guard let _ = buildAnimator(for: transitionContext) else {
@@ -127,7 +128,7 @@ extension CardAnimator: UIViewControllerInteractiveTransitioning {
 
 
 //	UIViewPropertyAnimator
-
+@available(iOS 10.0, *)
 private extension CardAnimator {
 	func endInteraction(from percentComplete: CGFloat, withVelocity velocity: CGVector, durationFactor: CGFloat) {
 		switch interactiveAnimator.state {
@@ -310,7 +311,7 @@ private extension CardAnimator {
 
 
 //	Helper methods
-
+@available(iOS 10.0, *)
 private extension CardAnimator {
 	private func insetBackCards(of pc: CardPresentationController?) {
 		guard
@@ -368,7 +369,7 @@ private extension CardAnimator {
 	}
 }
 
-
+@available(iOS 10.0, *)
 private extension UISpringTimingParameters {
 	/// A design-friendly way to create a spring timing curve.
 	///	See: https://medium.com/@nathangitter/building-fluid-interfaces-ios-swift-9732bb934bf5
