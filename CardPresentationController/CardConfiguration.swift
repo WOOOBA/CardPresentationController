@@ -16,7 +16,9 @@ public struct CardConfiguration {
 	public var verticalSpacing: CGFloat = 16
 
 	/// Top vertical inset for the existing (presenting) view when it's being pushed further back.
-	public var verticalInset: CGFloat = UIApplication.shared.statusBarFrame.size.height
+	public var verticalToInset: CGFloat = UIApplication.shared.statusBarFrame.size.height
+    
+    public var verticalFromInset: CGFloat = UIApplication.shared.statusBarFrame.size.height
 
 	///	Leading and trailing inset for the existing (presenting) view when it's being pushed further back.
 	public var horizontalInset: CGFloat = 16
@@ -49,7 +51,8 @@ public struct CardConfiguration {
 extension CardConfiguration {
 	///	Very convenient initializer; supply only those params which are different from default ones.
 	public init(verticalSpacing: CGFloat? = nil,
-				verticalInset: CGFloat? = nil,
+                verticalToInset: CGFloat? = nil,
+                verticalFromInset: CGFloat? = nil,
 				horizontalInset: CGFloat? = nil,
 				dismissAreaHeight: CGFloat? = nil,
 				cornerRadius: CGFloat? = nil,
@@ -61,8 +64,12 @@ extension CardConfiguration {
 			self.verticalSpacing = verticalSpacing
 		}
 
-		if let verticalInset = verticalInset {
-			self.verticalInset = verticalInset
+        if let verticalToInset = verticalToInset {
+            self.verticalToInset = verticalToInset
+        }
+        
+		if let verticalFromInset = verticalFromInset {
+			self.verticalFromInset = verticalFromInset
 		}
 
 		if let horizontalInset = horizontalInset {

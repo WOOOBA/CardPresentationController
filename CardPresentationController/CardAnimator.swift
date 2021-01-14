@@ -46,7 +46,8 @@ final class CardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 	//	Local configuration
 
 	private var verticalSpacing: CGFloat { return configuration.verticalSpacing }
-	private var verticalInset: CGFloat { return configuration.verticalInset }
+	private var verticalToInset: CGFloat { return configuration.verticalToInset }
+    private var verticalFromInset: CGFloat { return configuration.verticalFromInset }
 	private var horizontalInset: CGFloat { return configuration.horizontalInset }
 	private var cornerRadius: CGFloat { return configuration.cornerRadius }
 	private var backFadeAlpha: CGFloat  { return configuration.backFadeAlpha }
@@ -199,10 +200,10 @@ private extension CardAnimator {
 					//	on iOS 13, origin.y for this seem to always be 0
 					fromBeginFrame = transitionContext.initialFrame(for: fromVC)
 				}
-				fromEndFrame = fromBeginFrame.inset(by: UIEdgeInsets(top: verticalInset, left: horizontalInset, bottom: 0, right: horizontalInset))
+				fromEndFrame = fromBeginFrame.inset(by: UIEdgeInsets(top: verticalFromInset, left: horizontalInset, bottom: 0, right: horizontalInset))
 
 				let toBaseFinalFrame = transitionContext.finalFrame(for: toVC)
-				toEndFrame = toBaseFinalFrame.inset(by: UIEdgeInsets(top: verticalInset + verticalSpacing, left: 0, bottom: 0, right: 0))
+				toEndFrame = toBaseFinalFrame.inset(by: UIEdgeInsets(top: verticalToInset + verticalSpacing, left: 0, bottom: 0, right: 0))
 			}
 			let toStartFrame = offscreenFrame(inside: containerView)
 

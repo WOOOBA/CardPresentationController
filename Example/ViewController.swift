@@ -125,7 +125,7 @@ private extension ViewController {
 	@IBAction func popupLargeInsetCard(_ sender: UIButton) {
 		let vc = ContentController.instantiate()
 
-		let config = CardConfiguration(verticalInset: 132)
+		let config = CardConfiguration(verticalToInset: 132)
 
 		presentCard(vc,
 					configuration: config,
