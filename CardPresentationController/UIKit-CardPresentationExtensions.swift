@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 extension UIViewController {
 	private struct AssociatedKeys {
 		static var cardTransitionManager = "CardTransitionManager"
@@ -67,6 +68,7 @@ extension UIViewController {
 	}
 }
 
+@available(iOS 10.0, *)
 extension UIView {
 	func cardMaskTopCorners(using cornerRadius: CGFloat = 24) {
 		clipsToBounds = true
