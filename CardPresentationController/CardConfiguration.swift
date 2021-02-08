@@ -37,6 +37,8 @@ public struct CardConfiguration {
 
 	///	Set to false to disable interactive dismissal
 	public var allowInteractiveDismissal = true
+    
+    public var preventFromViewSink = false
 
 	///	Default initializer, with most suitable values
 	init() {}
