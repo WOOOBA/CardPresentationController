@@ -60,7 +60,8 @@ extension CardConfiguration {
 				cornerRadius: CGFloat? = nil,
 				backFadeAlpha: CGFloat? = nil,
 				initialTransitionFrame: CGRect? = nil,
-				allowInteractiveDismissal: Bool? = nil)
+				allowInteractiveDismissal: Bool? = nil,
+                preventFromViewSink: Bool? = nil)
 	{
 		if let verticalSpacing = verticalSpacing {
 			self.verticalSpacing = verticalSpacing
@@ -97,5 +98,9 @@ extension CardConfiguration {
 		if let allowInteractiveDismissal = allowInteractiveDismissal {
 			self.allowInteractiveDismissal = allowInteractiveDismissal
 		}
+        
+        if let preventFromViewSink = preventFromViewSink {
+            self.preventFromViewSink = preventFromViewSink
+        }
 	}
 }
